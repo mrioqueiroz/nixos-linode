@@ -33,6 +33,7 @@
   console.font = "Lat2-Terminus16";
   console.keyMap = "us";
 
+  users.users.root.initialHashedPassword = "$6$6iyK0WLdCV$EJQZB2FQ5DwDPrY3WIG9TlPgaFquY50AJk8dlO0e8gbYHNJsUkgT.h1/shHZ/EMzXHRG0IvMeAbNmSQ/qDjNg/";
   users.users.default = {
     isNormalUser = true;
     extraGroups = [ "wheel" ];
