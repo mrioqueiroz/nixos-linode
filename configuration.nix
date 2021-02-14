@@ -68,5 +68,8 @@
   security.sudo.wheelNeedsPassword = true;
   security.pki.certificates = [ ];
 
+  nix.gc.automatic = false;
+  nix.gc.dates = "03:15";
+
   system.stateVersion = "20.09";
 }
