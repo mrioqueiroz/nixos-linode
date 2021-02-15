@@ -60,7 +60,7 @@
   programs.mtr.enable = true;
   programs.vim.defaultEditor = true;
 
-  services.sysstat.enable = true;
+  services.sysstat.enable = false;
   services.openssh.enable = true;
   services.openssh.permitRootLogin = "yes";
   services.openssh.passwordAuthentication = false;
