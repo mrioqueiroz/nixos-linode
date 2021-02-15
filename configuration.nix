@@ -66,7 +66,7 @@
   };
 
   security.sudo.enable = true;
-  security.sudo.wheelNeedsPassword = true;
+  security.sudo.wheelNeedsPassword = false;
   security.pki.certificates = [ ];
 
   nix.gc.automatic = false;
