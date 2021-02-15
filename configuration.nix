@@ -20,6 +20,15 @@
     terminal_output serial;
   '';
 
+  fileSystems."/" =
+    { device = "/dev/sda";
+      fsType = "ext4";
+    };
+
+  swapDevices =
+    [ { device = "/dev/sdb"; }
+    ];
+
   time.timeZone = "America/Sao_Paulo";
 
   networking.hostName = "nixos-linode";
