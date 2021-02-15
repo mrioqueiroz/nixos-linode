@@ -56,6 +56,7 @@
   services.openssh.enable = true;
   services.openssh.permitRootLogin = "no";
   services.openssh.passwordAuthentication = false;
+  services.openssh.ports = [ 50022 ];
 
   environment.shellAliases = {
     c = "clear";
