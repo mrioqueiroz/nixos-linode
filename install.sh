@@ -9,6 +9,5 @@ sudo -i
 mount /dev/sda /mnt
 swapon /dev/sdb
 nixos-generate-config --root /mnt
-cd /mnt/etc/nixos
-curl -L https://github.com/mrioqueiroz/nixos-linode/raw/main/configuration.nix > configuration.nix
+curl -L https://github.com/mrioqueiroz/nixos-linode/raw/main/configuration.nix > /mnt/etc/nixos/configuration.nix
 nixos-install
