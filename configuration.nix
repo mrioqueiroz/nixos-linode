@@ -9,20 +9,17 @@
   boot.loader.grub.enable = true;
   boot.loader.grub.version = 2;
   boot.loader.grub.device = "nodev";
-  boot.kernelParams = [ "console=ttyS0,19200n8" ];
-  boot.loader.grub.extraConfig = ''
-    serial --speed=19200 --unit=0 --word=8 --parity=no --stop=1;
-    terminal_input serial;
-    terminal_output serial;
-  '';
+  boot.loader.grub.copyKernels = true;
+  boot.loader.grub.fsIdentifier = "label";
+  boot.loader.grub.extraConfig = "serial; terminal_input serial; terminal_output serial";
+  boot.kernelParams = [ "console=ttyS0" ];
   boot.loader.grub.forceInstall = true;
   boot.loader.timeout = 10;
   boot.cleanTmpDir = true;
 
-  networking.hostName = "nixos-linode";
-
   time.timeZone = "America/Sao_Paulo";
 
+  networking.hostName = "nixos-linode";
   networking.useDHCP = false;
   networking.interfaces.eth0.useDHCP = true;
   networking.usePredictableInterfaceNames = false;
@@ -42,7 +39,7 @@
     ];
   };
 
-  nixpkgs.config.allowUnfree = false;
+  nixpkgs.config.allowUnfree = true;
   virtualisation.docker.enable = true;
   environment.systemPackages = with pkgs; [
     vim
