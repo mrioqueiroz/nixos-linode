@@ -10,7 +10,7 @@ mount /dev/sda /mnt
 swapon /dev/sdb
 nixos-generate-config --root /mnt
 
-hardware="./hard.nix"
+hardware="/mnt/etc/nixos/hardware-configuration.nix"
 tmp="tmp.nix"
 
 # FIX:
